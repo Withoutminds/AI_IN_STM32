@@ -1,0 +1,23 @@
+{
+  "labels": [
+    "left",
+    "up",
+    "stop",
+    "down",
+    "right"
+  ],
+  "input": [
+    128,
+    128,
+    3
+  ],
+  "weights": "none",
+  "epochs": 8,
+  "parameters": 416613,
+  "final_val_accuracy": 1.0,
+  "fp32_tflite": "E:\\BUPT\\AI_IN_STM32\\host\\artifacts\\gesture_fp32.tflite",
+  "int8_tflite": "E:\\BUPT\\AI_IN_STM32\\host\\artifacts\\gesture_int8.tflite",
+  "fp32_bytes": 1636928,
+  "int8_bytes": 645712,
+  "dataset_marker": "synthetic"
+}

@@ -1,0 +1,3 @@
+stage,model,input,infer_ms,flash_bytes,ram_bytes,weights_bytes,source,notes
+official,efficientnet_v2B1_240_fft_qdq_int8,240,,,,,,pending_board,LCD shows Inference ms. Fill with host/parse_memory.py and the LCD value.
+gesture_int8,gesture_mobilenetv2_a035_128,128,,,,,,pending_board,UART line class= conf= infer_ms=. Fill with host/parse_serial_log.py.

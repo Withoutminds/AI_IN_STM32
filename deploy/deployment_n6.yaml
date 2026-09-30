@@ -1,0 +1,43 @@
+# STM32N6570-DK gesture deployment.
+# Edit the two tool paths to match this PC before running stm32ai_main.py.
+# If the config is launched from the Model Zoo image_classification folder,
+# change model_path and classes_file_path to absolute paths.
+
+model:
+  model_path: ../host/artifacts/gesture_int8.tflite
+
+operation_mode: deployment
+
+dataset:
+  dataset_name: gesture
+  classes_file_path: ./gesture_labels.txt
+
+preprocessing:
+  resizing:
+    interpolation: bilinear
+    aspect_ratio: crop
+    color_mode: rgb
+
+tools:
+  stedgeai:
+    optimization: balanced
+    on_cloud: False
+    path_to_stedgeai: C:/ST/STEdgeAI/4.0/Utilities/windows/stedgeai.exe
+    path_to_cubeIDE: C:/ST/STM32CubeIDE_2.0.0/STM32CubeIDE/stm32cubeide.exe
+
+deployment:
+  # Clone https://github.com/STMicroelectronics/STM32N6-GettingStarted-ImageClassification
+  # into third_party/ so this path exists. The service selects Application/STM32N6570-DK.
+  c_project_path: ../third_party/STM32N6-GettingStarted-ImageClassification
+  IDE: GCC
+  verbosity: 1
+  hardware_setup:
+    serie: STM32N6
+    board: STM32N6570-DK
+
+hydra:
+  run:
+    dir: ./experiments/${now:%Y_%m_%d_%H_%M_%S}
+
+mlflow:
+  uri: ./experiments/mlruns

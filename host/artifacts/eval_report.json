@@ -1,0 +1,118 @@
+{
+  "dataset_marker": "synthetic",
+  "labels": [
+    "left",
+    "up",
+    "stop",
+    "down",
+    "right"
+  ],
+  "confidence_min": 0.7,
+  "fp32": {
+    "accuracy": 1.0,
+    "accepted_fraction": 1.0,
+    "accepted_accuracy": 1.0,
+    "confusion": [
+      [
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        16
+      ]
+    ],
+    "mean_confidence": 0.9981376528739929,
+    "mean_invoke_ms": 0.620986250032729,
+    "tflite_bytes": 1636928
+  },
+  "int8": {
+    "accuracy": 1.0,
+    "accepted_fraction": 1.0,
+    "accepted_accuracy": 1.0,
+    "confusion": [
+      [
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        16,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        16
+      ]
+    ],
+    "mean_confidence": 0.995361328125,
+    "mean_invoke_ms": 0.39443499999833875,
+    "tflite_bytes": 645712,
+    "unknown_rejection_rate": 1.0,
+    "control_on_test": {
+      "vote_moves": 5,
+      "direct_moves": 5,
+      "frames": 80
+    },
+    "control_with_glitches": {
+      "vote_moves": 5,
+      "direct_moves": 15,
+      "frames": 35
+    }
+  },
+  "board": {
+    "infer_ms": null,
+    "capture_ms": null,
+    "servo_motion_ms": null,
+    "note": "Fill from USART after flashing. End-to-end ms is (vote_frames-1)*frame_period + infer_ms + servo_motion_ms."
+  }
+}
